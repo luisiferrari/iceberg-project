@@ -1,0 +1,9 @@
+Conect powerbi to trino -> https://www.youtube.com/watch?v=4eWgjd1Etrw
+
+commands
+docker ps -> Listar containers
+docker network ls -> Listar redes
+docker exec -it <container> bash -> entra no container
+docker compose down -> Remove todos os containers e imagens
+docker compose up -d --build -> Builda seu docker-compose.yml
+
