@@ -1,0 +1,1 @@
+{"_invocation_id": "25e939d5-af0b-4aea-b955-ec4b57cdfa63", "linked": {"0": {"name": "model.lakehouse.gold_vendas", "type": "model"}, "1": {"name": "model.lakehouse.silver_vendas", "type": "model", "succ": [0]}}}

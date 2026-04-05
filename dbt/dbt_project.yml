@@ -1,0 +1,12 @@
+name: lakehouse
+profile: lakehouse
+
+models:
+  lakehouse:
+    silver:
+      +materialized: table
+      +schema: silver
+
+    gold:
+      +materialized: table
+      +schema: gold

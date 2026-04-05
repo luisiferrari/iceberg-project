@@ -1,0 +1,45 @@
+[0m18:09:04.992774 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162B90B1690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162B9071090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162B90AEA90>]}
+
+
+============================== 18:09:05.009980 | 839410e6-d43b-4585-840c-5046470991fd ==============================
+[0m18:09:05.009980 [info ] [MainThread]: Running with dbt=1.11.7
+[0m18:09:05.011800 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Minello-Ferrari\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init lakehouse', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m18:09:05.335669 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\Minello-Ferrari\.dbt
+[0m18:09:05.350123 [debug] [MainThread]: Starter project path: C:\Users\Minello-Ferrari\Documents\apache-iceberg\.venv\Lib\site-packages\dbt\include\starter_project
+[0m18:09:05.467540 [info ] [MainThread]: 
+Your new dbt project "lakehouse" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:09:05.469571 [info ] [MainThread]: Setting up your profile.
+[0m18:09:15.164097 [info ] [MainThread]: Profile lakehouse written to C:\Users\Minello-Ferrari\.dbt\profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m18:09:15.171471 [debug] [MainThread]: Command `dbt init` succeeded at 18:09:15.171471 after 10.33 seconds
+[0m18:09:15.171471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162B7DC9E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162B2CD5910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162B9070850>]}
+[0m18:09:15.173724 [debug] [MainThread]: Flushing usage events
+[0m18:09:16.143177 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:42:24.012414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019CBCA38650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019CBCA31890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019CBCA3A190>]}
+
+
+============================== 21:42:24.016144 | 86a83b12-44e6-4820-8fe0-b868b1bc8cc6 ==============================
+[0m21:42:24.016144 [info ] [MainThread]: Running with dbt=1.11.7
+[0m21:42:24.016723 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Minello-Ferrari\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m21:42:24.016723 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Minello-Ferrari\Documents\apache-iceberg\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m21:42:24.017974 [debug] [MainThread]: Command `dbt test` failed at 21:42:24.017974 after 0.11 seconds
+[0m21:42:24.017974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019CB6943E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019CBCA3A210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019CBCA38C10>]}
+[0m21:42:24.017974 [debug] [MainThread]: Flushing usage events
+[0m21:42:24.786838 [debug] [MainThread]: An error was encountered while trying to flush usage events

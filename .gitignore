@@ -1,0 +1,7 @@
+*.txt
+lakehouse
+*.vscode
+*.venv
+# *logs
+*notebooks
+warehouse
