@@ -1,0 +1,245 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "2afc0f63-bfb4-45ff-83c9-6b4389b1e6c0",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -688,
+        0
+      ],
+      "id": "b51b9539-dbca-4392-9140-bfbf29ce876d",
+      "name": "Webhook",
+      "webhookId": "2afc0f63-bfb4-45ff-83c9-6b4389b1e6c0"
+    },
+    {
+      "parameters": {
+        "url": "https://dogapi.dog/api/v2/breeds",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -384,
+        0
+      ],
+      "id": "79b80c1c-8dce-4f8c-ac03-e1314ed8b375",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "=data.data",
+        "include": "selectedOtherFields",
+        "fieldsToInclude": "id",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -16,
+        0
+      ],
+      "id": "b9a6817e-8fd6-4fa8-8d09-86e6661b8150",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "23bb5087-53db-48f3-96f3-5cf820a304cc",
+              "name": "id",
+              "value": "={{ $json['data.data'].id }}",
+              "type": "string"
+            },
+            {
+              "id": "26413b20-fc87-4fd7-9c84-967833364e9e",
+              "name": "name",
+              "value": "={{ $json['data.data'].attributes.name }}",
+              "type": "string"
+            },
+            {
+              "id": "bb2ae235-790f-4d1d-a2c8-93a0ba580aaf",
+              "name": "max_life",
+              "value": "={{ $json['data.data'].attributes.life.max }}",
+              "type": "number"
+            },
+            {
+              "id": "f17e77af-1b2f-4ed5-bf08-b2a92fcd5e8a",
+              "name": "has_allergy",
+              "value": "={{ $json['data.data'].attributes.hypoallergenic }}",
+              "type": "boolean"
+            },
+            {
+              "id": "4281c3a6-64aa-4cc8-bd03-b89831f8b0f0",
+              "name": "description",
+              "value": "={{ $json['data.data'].attributes.description }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        144,
+        0
+      ],
+      "id": "a676d7ab-6ebb-430c-9ef4-d6910ba1a205",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  return {\n    json: {\n      data: JSON.parse(item.json.data)\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -208,
+        0
+      ],
+      "id": "8944a221-3341-4f17-9799-349ac1b44ad8",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://trino:8080/v1/statement",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Trino-User",
+              "value": "trino"
+            },
+            {
+              "name": "X-Trino-Catalog",
+              "value": "iceberg"
+            },
+            {
+              "name": "X-Trino-Schema",
+              "value": "raw"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "text/plain",
+        "body": "=INSERT INTO iceberg.raw.dogs (id, name, max_life, has_allergy, description)\nVALUES (\n  '{{ $json.id }}',\n  '{{ $json.name }}',\n  {{ $json.max_life }},\n  {{ $json.has_allergy }},\n  '{{ $json.description }}'\n)",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        320,
+        0
+      ],
+      "id": "ed1ccdd8-c6a0-45e5-8e70-95bf751818de",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.nextUri }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        512,
+        0
+      ],
+      "id": "2296dcca-b491-4e9f-9c6f-f0ae715ff051",
+      "name": "HTTP Request2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "350a59b2-7bfc-4314-8546-fb7912e46324",
+  "meta": {
+    "instanceId": "3f2cb6030e0727d51adcfe7b3012018b2180c4ed75b1a772443aa335b623d109"
+  },
+  "id": "kQFMVJfkzgnsP4nj",
+  "tags": []
+}
