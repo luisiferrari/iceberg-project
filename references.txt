@@ -7,3 +7,11 @@ docker exec -it <container> bash -> entra no container
 docker compose down -> Remove todos os containers e imagens
 docker compose up -d --build -> Builda seu docker-compose.yml
 
+python -m venv venv -> Criar venv
+.\.venv\Scripts\Activate.ps1 -> Ativar venv
+deactivate -> Desativar venv
+
+
+Invoke-WebRequest -Uri "http://localhost:5678/webhook-test/2afc0f63-bfb4-45ff-83c9-6b4389b1e6c0" -Method POST
+
+teste

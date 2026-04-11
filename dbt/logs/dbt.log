@@ -2523,3 +2523,212 @@ select
 [0m18:20:36.874655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb9708a290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb9561ef80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb9561e980>]}
 [0m18:20:36.885270 [debug] [MainThread]: Flushing usage events
 [0m18:20:37.921357 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:09:32.275763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23cb07a1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23c9ffab60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23c9ff8ac0>]}
+
+
+============================== 21:09:32.283811 | b535704b-43e0-4dca-9bd7-d654abfa092a ==============================
+[0m21:09:32.283811 [info ] [MainThread]: Running with dbt=1.11.7
+[0m21:09:32.286273 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'debug': 'False', 'use_colors': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/usr/app/logs', 'empty': 'None', 'indirect_selection': 'eager', 'version_check': 'True', 'fail_fast': 'False', 'profiles_dir': '/usr/app', 'warn_error': 'None', 'cache_selected_only': 'False', 'write_json': 'True', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'printer_width': '80', 'introspect': 'True', 'target_path': 'None', 'partial_parse': 'True'}
+[0m21:09:32.344217 [info ] [MainThread]: dbt version: 1.11.7
+[0m21:09:32.345953 [info ] [MainThread]: python version: 3.10.20
+[0m21:09:32.348562 [info ] [MainThread]: python path: /usr/local/bin/python3.10
+[0m21:09:32.352656 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.41
+[0m21:09:32.609736 [info ] [MainThread]: Using profiles dir at /usr/app
+[0m21:09:32.612286 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
+[0m21:09:32.614406 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m21:09:32.616721 [info ] [MainThread]: adapter type: trino
+[0m21:09:32.618421 [info ] [MainThread]: adapter version: 1.10.1
+[0m21:09:32.905682 [info ] [MainThread]: Configuration:
+[0m21:09:32.907850 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:09:32.909573 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:09:32.911364 [info ] [MainThread]: Required dependencies:
+[0m21:09:32.913166 [debug] [MainThread]: Executing "git --help"
+[0m21:09:32.963303 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:09:32.967235 [debug] [MainThread]: STDERR: "b''"
+[0m21:09:32.969149 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:09:32.970955 [info ] [MainThread]: Connection:
+[0m21:09:32.974639 [info ] [MainThread]:   host: trino
+[0m21:09:32.977172 [info ] [MainThread]:   port: 8080
+[0m21:09:32.979839 [info ] [MainThread]:   user: trino
+[0m21:09:32.985209 [info ] [MainThread]:   database: iceberg
+[0m21:09:32.989259 [info ] [MainThread]:   schema: dev
+[0m21:09:32.993597 [info ] [MainThread]:   cert: None
+[0m21:09:32.997065 [info ] [MainThread]:   prepared_statements_enabled: True
+[0m21:09:33.001093 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m21:09:33.135275 [debug] [MainThread]: Acquiring new trino connection 'debug'
+[0m21:09:33.356412 [debug] [MainThread]: Using trino connection "debug"
+[0m21:09:33.358523 [debug] [MainThread]: On debug: select 1 as id
+[0m21:09:33.360317 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:09:33.362237 [warn ] [MainThread]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m21:09:33.364140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'b535704b-43e0-4dca-9bd7-d654abfa092a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23c99ffcd0>]}
+[0m21:09:33.729745 [debug] [MainThread]: SQL status: SUCCESS in 0.369 seconds
+[0m21:09:33.733418 [debug] [MainThread]: On debug: Close
+[0m21:09:33.736812 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:09:33.739634 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:09:33.744496 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.774837, "process_in_blocks": "93576", "process_kernel_time": 1.934172, "process_mem_max_rss": "110424", "process_out_blocks": "0", "process_user_time": 4.591115}
+[0m21:09:33.746601 [debug] [MainThread]: Command `dbt debug` succeeded at 21:09:33.746401 after 1.78 seconds
+[0m21:09:33.748545 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:09:33.750418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23cb07a1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23caf4df60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23ca0117e0>]}
+[0m21:09:33.752494 [debug] [MainThread]: Flushing usage events
+[0m21:09:34.421238 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:09:39.666323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb96a9e6230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb969969030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb96996a5c0>]}
+
+
+============================== 21:09:39.672487 | 966452b2-b3dc-4177-a9cc-4834647f267c ==============================
+[0m21:09:39.672487 [info ] [MainThread]: Running with dbt=1.11.7
+[0m21:09:39.675718 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'log_path': '/usr/app/logs', 'debug': 'False', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'use_colors': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'no_print': 'None', 'printer_width': '80', 'partial_parse': 'True', 'write_json': 'True', 'empty': 'False', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'profiles_dir': '/usr/app', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'quiet': 'False'}
+[0m21:09:40.105636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '966452b2-b3dc-4177-a9cc-4834647f267c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb96c6c5240>]}
+[0m21:09:40.271762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '966452b2-b3dc-4177-a9cc-4834647f267c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb9697857b0>]}
+[0m21:09:40.274138 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m21:09:40.386231 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m21:09:40.969560 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:09:40.971085 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:09:40.972835 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:09:41.085605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '966452b2-b3dc-4177-a9cc-4834647f267c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb968f7ef50>]}
+[0m21:09:41.249894 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m21:09:41.279884 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m21:09:41.340765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '966452b2-b3dc-4177-a9cc-4834647f267c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb968fade70>]}
+[0m21:09:41.344911 [info ] [MainThread]: Found 2 models, 486 macros
+[0m21:09:41.348113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '966452b2-b3dc-4177-a9cc-4834647f267c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb9693bd900>]}
+[0m21:09:41.355674 [info ] [MainThread]: 
+[0m21:09:41.359304 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:09:41.362267 [info ] [MainThread]: 
+[0m21:09:41.365667 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m21:09:41.382264 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m21:09:41.515553 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m21:09:41.524538 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "lakehouse", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m21:09:41.528514 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:09:41.530695 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m21:09:41.534844 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '966452b2-b3dc-4177-a9cc-4834647f267c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb969b23b50>]}
+[0m21:09:41.801524 [debug] [ThreadPool]: SQL status: SUCCESS in 0.273 seconds
+[0m21:09:41.806524 [debug] [ThreadPool]: On list_iceberg: Close
+[0m21:09:41.814306 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m21:09:41.817494 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "lakehouse", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m21:09:41.819999 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:09:41.909196 [debug] [ThreadPool]: SQL status: SUCCESS in 0.089 seconds
+[0m21:09:41.913399 [debug] [ThreadPool]: On list_iceberg: Close
+[0m21:09:41.918569 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now list_iceberg_dev_silver)
+[0m21:09:41.954027 [debug] [ThreadPool]: Using trino connection "list_iceberg_dev_silver"
+[0m21:09:41.956806 [debug] [ThreadPool]: On list_iceberg_dev_silver: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "lakehouse", "target_name": "dev", "connection_name": "list_iceberg_dev_silver"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'dev_silver') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'dev_silver'
+[0m21:09:41.959199 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:09:43.087108 [debug] [ThreadPool]: SQL status: SUCCESS in 1.128 seconds
+[0m21:09:43.097034 [debug] [ThreadPool]: On list_iceberg_dev_silver: ROLLBACK
+[0m21:09:43.101271 [debug] [ThreadPool]: On list_iceberg_dev_silver: Close
+[0m21:09:43.108634 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg_dev_silver, now list_iceberg_dev_gold)
+[0m21:09:43.131438 [debug] [ThreadPool]: Using trino connection "list_iceberg_dev_gold"
+[0m21:09:43.134916 [debug] [ThreadPool]: On list_iceberg_dev_gold: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "lakehouse", "target_name": "dev", "connection_name": "list_iceberg_dev_gold"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'dev_gold') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'dev_gold'
+[0m21:09:43.138745 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:09:43.780794 [debug] [ThreadPool]: SQL status: SUCCESS in 0.642 seconds
+[0m21:09:43.789379 [debug] [ThreadPool]: On list_iceberg_dev_gold: ROLLBACK
+[0m21:09:43.792505 [debug] [ThreadPool]: On list_iceberg_dev_gold: Close
+[0m21:09:43.798501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '966452b2-b3dc-4177-a9cc-4834647f267c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb96c7164a0>]}
+[0m21:09:43.803043 [debug] [MainThread]: On master: COMMIT
+[0m21:09:43.817265 [debug] [Thread-1 (]: Began running node model.lakehouse.silver_vendas
+[0m21:09:43.820935 [info ] [Thread-1 (]: 1 of 2 START sql table model dev_silver.silver_vendas .......................... [RUN]
+[0m21:09:43.824142 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_iceberg_dev_gold, now model.lakehouse.silver_vendas)
+[0m21:09:43.826808 [debug] [Thread-1 (]: Began compiling node model.lakehouse.silver_vendas
+[0m21:09:43.836043 [debug] [Thread-1 (]: Writing injected SQL for node "model.lakehouse.silver_vendas"
+[0m21:09:43.858383 [debug] [Thread-1 (]: Began executing node model.lakehouse.silver_vendas
+[0m21:09:44.010952 [debug] [Thread-1 (]: Writing runtime sql for node "model.lakehouse.silver_vendas"
+[0m21:09:44.040488 [debug] [Thread-1 (]: Using trino connection "model.lakehouse.silver_vendas"
+[0m21:09:44.043297 [debug] [Thread-1 (]: On model.lakehouse.silver_vendas: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "lakehouse", "target_name": "dev", "node_id": "model.lakehouse.silver_vendas"} */
+
+  
+    
+
+    create table "iceberg"."dev_silver"."silver_vendas__dbt_tmp"
+      
+      
+    as (
+      SELECT
+  id,
+  nome,
+  valor
+FROM iceberg.raw.vendas_raw
+    )
+[0m21:09:44.046323 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:09:44.177583 [debug] [Thread-1 (]: Trino adapter: Trino query id: 20260406_210944_00304_bikce
+[0m21:09:44.180409 [debug] [Thread-1 (]: Trino adapter: Trino error: TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 14:6: Table 'iceberg.raw.vendas_raw' does not exist", query_id=20260406_210944_00304_bikce)
+[0m21:09:44.184800 [debug] [Thread-1 (]: On model.lakehouse.silver_vendas: ROLLBACK
+[0m21:09:44.187938 [debug] [Thread-1 (]: On model.lakehouse.silver_vendas: Close
+[0m21:09:44.215708 [debug] [Thread-1 (]: Database Error in model silver_vendas (models/silver/silver_vendas.sql)
+  TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 14:6: Table 'iceberg.raw.vendas_raw' does not exist", query_id=20260406_210944_00304_bikce)
+  compiled code at target/run/lakehouse/models/silver/silver_vendas.sql
+[0m21:09:44.226790 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '966452b2-b3dc-4177-a9cc-4834647f267c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb96ac69f90>]}
+[0m21:09:44.231072 [error] [Thread-1 (]: 1 of 2 ERROR creating sql table model dev_silver.silver_vendas ................. [[31mERROR[0m in 0.40s]
+[0m21:09:44.235814 [debug] [Thread-1 (]: Finished running node model.lakehouse.silver_vendas
+[0m21:09:44.240065 [debug] [Thread-4 (]: Marking all children of 'model.lakehouse.silver_vendas' to be skipped because of status 'error'.  Reason: Database Error in model silver_vendas (models/silver/silver_vendas.sql)
+  TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 14:6: Table 'iceberg.raw.vendas_raw' does not exist", query_id=20260406_210944_00304_bikce)
+  compiled code at target/run/lakehouse/models/silver/silver_vendas.sql.
+[0m21:09:44.246129 [debug] [Thread-1 (]: Began running node model.lakehouse.gold_vendas
+[0m21:09:44.248910 [info ] [Thread-1 (]: 2 of 2 SKIP relation dev_gold.gold_vendas ...................................... [[33mSKIP[0m]
+[0m21:09:44.252522 [debug] [Thread-1 (]: Finished running node model.lakehouse.gold_vendas
+[0m21:09:44.257816 [debug] [MainThread]: On master: COMMIT
+[0m21:09:44.260950 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:09:44.263385 [debug] [MainThread]: Connection 'model.lakehouse.silver_vendas' was properly closed.
+[0m21:09:44.266896 [info ] [MainThread]: 
+[0m21:09:44.271012 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 2.90 seconds (2.90s).
+[0m21:09:44.275780 [debug] [MainThread]: Command end result
+[0m21:09:44.386190 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m21:09:44.404618 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m21:09:44.427898 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m21:09:44.430876 [info ] [MainThread]: 
+[0m21:09:44.434822 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m21:09:44.437538 [info ] [MainThread]: 
+[0m21:09:44.440182 [error] [MainThread]: [31mFailure in model silver_vendas (models/silver/silver_vendas.sql)[0m
+[0m21:09:44.443132 [error] [MainThread]:   Database Error in model silver_vendas (models/silver/silver_vendas.sql)
+  TrinoUserError(type=USER_ERROR, name=TABLE_NOT_FOUND, message="line 14:6: Table 'iceberg.raw.vendas_raw' does not exist", query_id=20260406_210944_00304_bikce)
+  compiled code at target/run/lakehouse/models/silver/silver_vendas.sql
+[0m21:09:44.445897 [info ] [MainThread]: 
+[0m21:09:44.448403 [info ] [MainThread]:   compiled code at target/compiled/lakehouse/models/silver/silver_vendas.sql
+[0m21:09:44.451546 [info ] [MainThread]: 
+[0m21:09:44.455217 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 NO-OP=0 TOTAL=2
+[0m21:09:44.460656 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 4.98453, "process_in_blocks": "3288", "process_kernel_time": 0.673199, "process_mem_max_rss": "121308", "process_out_blocks": "0", "process_user_time": 5.043969}
+[0m21:09:44.464223 [debug] [MainThread]: Command `dbt run` failed at 21:09:44.463791 after 4.99 seconds
+[0m21:09:44.468924 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb96a9e6230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb96c6c5240>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb96a714eb0>]}
+[0m21:09:44.472760 [debug] [MainThread]: Flushing usage events
+[0m21:09:45.063787 [debug] [MainThread]: An error was encountered while trying to flush usage events
